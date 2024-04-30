@@ -18,7 +18,22 @@ data() {
 },
 methods: {
     handleSubmit() {
-        console.log(this.title, this.details)
+        let project = {
+            title: this.title,
+            details: this.details,
+            complete: false
+        }
+        console.log(project)
+
+    fetch('http://localhost:3000/project', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify(project)
+        })
+        .then(() => {
+            this.$router.push('/')
+        })
+        .catch(err => console.log(err.message))
     }
 }
 }
@@ -55,8 +70,8 @@ textarea {
 form button {
     display: block;
     margin: 20px auto 0;
-    background: #00ce89;
-    color: white;
+    background: #0cdd24e9;
+    color: rgb(255, 252, 252);
     padding: 10px;
     border: 0;
     border-radius: 6px;

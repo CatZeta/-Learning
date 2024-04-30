@@ -2,15 +2,21 @@
   "project": [
     {
       "id": "1",
-      "title": "Create new homepage banner",
-      "details": "Lorem Ipsum",
-      "complete": true
+      "title": "Create new homepage bannerzinho",
+      "details": "Lorem Ipsum x -3",
+      "complete": false
     },
     {
-      "id": "2",
-      "title": "Make marketing email",
-      "details": "Lorem Ipsum",
+      "id": "a21a",
+      "title": "Bom Dia",
+      "details": "Dar bons dias por aí",
       "complete": false
+    },
+    {
+      "id": "942f",
+      "title": "Fazer Routing ",
+      "details": "Redirecionar depois da new task ser submited",
+      "complete": true
     }
   ]
 }

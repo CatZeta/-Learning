@@ -3,7 +3,10 @@
         <div class="actions">
             <h3 @click="toggleDetails">{{ project.title }}</h3>
             <div class="icons">
-                <span class="material-symbols-outlined">edit</span>
+                <RouterLink :to="{name: 'editProject', params: {id: project.id}}">
+                    <span class="material-symbols-outlined">edit</span>
+                </RouterLink>
+                
                 <span  @click="deleteProject" class="material-symbols-outlined">delete</span>
                 <span @click="toggleComplete" class="material-symbols-outlined tick">done</span>
             </div>
@@ -76,7 +79,7 @@ h3 {
 .project.complete {
     border-left: 4px solid #0cdd24;
 }
-.project.complete  .tick{
+.project.complete .tick{
     color: #0cdd24;
 }
 </style>
