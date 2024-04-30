@@ -1,2 +1,2 @@
 # -Learning
-Exercicios referentes aoprocesso de estudo
+Exercicios referentes ao processo de estudo
