@@ -1,6 +1,6 @@
 import { ref } from "vue"
 
-//NOT BEING USED, THANK YOU FOR TRYING LOL
+//NOT BEING USED
 const setPost = (create) => {
     const create = ref([null])
     const error = ref(null)

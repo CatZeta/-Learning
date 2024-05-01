@@ -1,6 +1,6 @@
 <template>
     <div v-if="post" class="post">
-        <h1>{{ post.title }}</h1>
+        <h3>{{ post.title }}</h3>
         <p class="pre">{{ post.body }}</p>
     </div>
 </template>
@@ -20,16 +20,18 @@ export default {
 }
 </script>
 
-<style>
-    .post {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    .post p {
-        color: #444;
-        line-height: 40px;
-    }
-    .pre {
-        white-space: pre-wrap;
-    }
+<style scoped>
+.post {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .post p {
+    color: #444;
+    line-height: 1.5em;
+    margin-top: 40px;
+  }
+  .pre {
+    white-space: pre-wrap;
+  }
+ 
 </style>
