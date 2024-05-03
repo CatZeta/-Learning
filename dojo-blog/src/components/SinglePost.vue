@@ -5,20 +5,21 @@
         </RouterLink>
         
         <p>{{ snippet }}</p>
-        
-        <span v-for="tag in post.tags" :key="tag">
+       <!-- <RouterLink :to="{name: 'tag', params: {tag: post.tag}}"> -->
+          <span v-for="tag in post.tags" :key="tag">
             #{{ tag }}
-        </span>
-        
-        
+          </span>
+        <!--</RouterLink> -->  
     </div>
 </template>
 
 <script>
 import { computed } from "vue";
+
 export default {
     props: ['post'],
     setup (props) {
+      
         const snippet = computed(() => {
             return props.post.body.substring(0, 100) + '(...)'
         })

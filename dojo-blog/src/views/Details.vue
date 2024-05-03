@@ -7,15 +7,21 @@
 
 <script>
 import getPost from '@/composables/getPost.js'
+import { useRoute } from 'vue-router'
 
 export default {
     props:['id'],
     setup (props) {
-        const {post, error, load} = getPost(props.id)
+      const route = useRoute()
+
+        //Ambos obtem o mesmo resultado, um apanhando o id pelos props e outro pelo route que tem no parametro o id do post
+        //const {post, error, load} = getPost(props.id)
+        const {post, error, load} = getPost(route.params.id)
+        
     
     load()
 
-        return {post, error}
+    return {post, error}
     }
 }
 </script>
