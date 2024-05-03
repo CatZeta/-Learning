@@ -15,5 +15,5 @@ const firebaseConfig = {
 
   //init firestore
   const projectFirestore = firebase.firestore()
-
-  export {projectFirestore}
+  const timestamp = firebase.firestore.FieldValue.serverTimestamp
+  export {projectFirestore, timestamp}
