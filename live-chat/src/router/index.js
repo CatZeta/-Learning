@@ -28,7 +28,7 @@ const routes = [
     path: '/',
     name: 'home',
     component: Welcome,
-    beforeEnter:requireNoAuth
+    beforeEnter: requireNoAuth
   },
   {
     path: '/chatroom',
